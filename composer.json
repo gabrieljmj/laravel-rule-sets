@@ -14,7 +14,6 @@
         }
     },
     "require": {
-        "laravel/laravel": ">=5.0",
         "php": ">=7.0"
     },
     "require-dev": {
