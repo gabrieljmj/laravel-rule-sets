@@ -2,7 +2,6 @@
 
 namespace Gabrieljmj\LaravelRuleSets\Console\Command;
 
-use Gabrieljmj\LaravelRuleSets\RuleSetInterface;
 use Illuminate\Console\GeneratorCommand;
 
 class MakeRuleSetCommand extends GeneratorCommand
@@ -26,7 +25,7 @@ class MakeRuleSetCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $type = RuleSetInterface::class;
+    protected $type = 'Rule set';
 
     /**
      * Get the stub file for the generator.
