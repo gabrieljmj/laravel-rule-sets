@@ -18,5 +18,12 @@
     },
     "require-dev": {
         "phpunit/phpunit": "8.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gabrieljmj\\LaravelRuleSets\\Providers\\RuleSetsServiceProvider"
+            ]
+        }
     }
 }

@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Rules\RuleSets;
+
+use Gabrieljmj\LaravelRuleSets\AbstractRuleSet;
+
+class RuleSet extends AbstractRuleSet
+{
+    /**
+     * @return array
+     */
+    protected function rules(): array
+    {
+        return [
+            // ...
+        ];
+    }
+}
