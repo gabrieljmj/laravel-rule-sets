@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Rules\RuleSets;
+namespace DummyNamespace;
 
 use Gabrieljmj\LaravelRuleSets\AbstractRuleSet;
 
-class RuleSet extends AbstractRuleSet
+class DummyClass extends AbstractRuleSet
 {
     /**
      * @return array
