@@ -22,8 +22,6 @@ It is necessary to add the service provider to the providers list at ```config/a
 Gabrieljmj\LaravelRuleSets\Providers\RuleSetsServiceProvider::class,
 ```
 
-### Publishing the provider
-
 ## Usage
 
 The package provides the artisan command ```make:rule-set```. It will generate a RuleSet at the namespace ```App\Rules\RuleSets```.
