@@ -1,6 +1,8 @@
 # Laravel Rule Sets
 
-Avoid repeating rules sets through requests.
+![Travis (.com)](https://img.shields.io/travis/com/gabrieljmj/laravel-rule-sets) ![Packagist](https://img.shields.io/packagist/l/gabrieljmj/laravel-rule-sets)
+
+Avoid repeating validation rules sets. With this library it is possible to share rules between sets and reuse sets through requests.
 
 ## Installing
 
@@ -9,18 +11,28 @@ Avoid repeating rules sets through requests.
 Execute the following command:
 
 ```terminal
-
 composer require gabrieljmj/laravel-rule-sets
-
 ```
+
+#### For Laravel before 5.5
+
+It is necessary to add the service provider to the providers list at ```config/app.php```:
+
+```php
+Gabrieljmj\LaravelRuleSets\Providers\RuleSetsServiceProvider::class,
+```
+
+### Publishing the provider
 
 ## Usage
 
-Create a class that extends ```AbstractRuleSet``` (recommended to be created inside ```app/Rules/RuleSet```). It will provide you the ```getRules``` and ```combineWithRules``` methods.
+The package provides the artisan command ```make:rule-set```. It will generate a RuleSet at the namespace ```App\Rules\RuleSets```.
 
-There are one required methods:
+```terminal
+artisan make:rule-set UserRuleSet
+```
 
-- ```rules(): array```: Returns an array with the rules.
+Add the necessary rules at the protected method ```rules``` of the set.
 
 ```php
 <?php
@@ -34,6 +46,7 @@ class UserRuleSet extends AbstractRuleSet
     protected function rules(): array
     {
         return [
+            'username' => 'required',
             'email' => 'required|email',
             'password' => 'required|min:8|confirmed',
         ];
