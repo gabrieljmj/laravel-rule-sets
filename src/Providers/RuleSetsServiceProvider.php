@@ -2,7 +2,7 @@
 
 namespace Gabrieljmj\LaravelRuleSets\Providers;
 
-use Gabrieljmj\LaravelRuleSets\Console\Command\MakeRuleSetCommand;
+use Gabrieljmj\LaravelRuleSets\Command\MakeRuleSetCommand;
 use Illuminate\Support\ServiceProvider;
 
 class RuleSetsServiceProvider extends ServiceProvider
